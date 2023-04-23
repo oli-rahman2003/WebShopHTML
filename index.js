@@ -1,9 +1,9 @@
-let product = {};
+/*let product = {};
 product.name = "laxatives";
 product.price = 13.99;
 product.printName = function(){
     console.log(this.name);
-}
+}*/
 
 const products = [
     {name:"soap", price:2.99},
@@ -21,10 +21,17 @@ for (let i = 0; i < products.length; i++) {
     productElement.innerHTML = `<p>${product.name}: ${product.price}</p>`;
     productContainer.appendChild(productElement);
     productContainer.appendChild(button);
-    
 
-    
+    let purchaseList = [];
+
+  button.addEventListener("click",
+    function(event) {
+        purchaseList.push(product);
+        console.log(purchaseList)
+    }
+);
   }
 
+  
 
 
